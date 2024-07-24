@@ -48,6 +48,8 @@ morning at 7:05 a.m. The tutorial is below, enjoy. </p>
       <p>c) Getting the Refresh Token is a bit tricky, first get your Authorization Code:</p>
       
       https://accounts.spotify.com/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=YOUR_SCOPES
+
+  <p>NOTE: It will take you to 404 page, that last part of the URL is your Authorization Code.</p>
   <p>d) Now using <b>Curl</b> enter the following into your terminal:</p>
   
       curl -X POST "https://accounts.spotify.com/api/token" \
