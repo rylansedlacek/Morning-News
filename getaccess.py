@@ -22,9 +22,9 @@ def get_devices(access_token):
     response = requests.get(url, headers=headers)
     return response.json()
 
-client_id = "e15dac3733004dea97472dcb07ca942a"
-client_secret = "c3908f746ee44581b04a75f5cf47db35"
-refresh_token = "AQCCtUmwzoDhi5xGXWKqWzCTw9LyCQsVhQs-8CEGZadRmM5F7HR8ZV-luGwmefKPkjIo7pU16dxVwIwlmFRusCtZ42B4Sbl5Ly8SnQ64HR_7UB2xtcT1CAp6PJzCYZ3MvyQ"
+client_id = " " #PUT YOUR ID HERE -- EASY TO FIND
+client_secret = " " #PUT YOUR SECRET HERE -- EASY TO FIND
+refresh_token = " " #FOLLOW THE TUTORIAL BELOW TO GET YOUR TOKEN
 
 access_token = get_access_token(client_id, client_secret, refresh_token)
 devices = get_devices(access_token)
