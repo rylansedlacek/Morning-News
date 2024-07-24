@@ -30,11 +30,11 @@ def play_podcast(access_token, device_id, podcast_uri):
     return response.status_code
 
 def lambda_handler(event, context):
-    client_id = os.getenv("e15dac3733004dea97472dcb07ca942a")
-    client_secret = os.getenv("c3908f746ee44581b04a75f5cf47db35")
-    refresh_token = os.getenv("AQCCtUmwzoDhi5xGXWKqWzCTw9LyCQsVhQs-8CEGZadRmM5F7HR8ZV-luGwmefKPkjIo7pU16dxVwIwlmFRusCtZ42B4Sbl5Ly8SnQ64HR_7UB2xtcT1CAp6PJzCYZ3MvyQ")
-    device_id = os.getenv("7e35837d51098501682dfaf24f189c03f0c1dda6")
-    podcast_uri = os.getenv("spotify:show:5YRTZNTGT7MWhktYYpjR8v")
+    client_id = os.getenv(" ") #PLACE CLIENT ID HERE
+    client_secret = os.getenv(" ") #PLACE CLIENT SECRET HERE
+    refresh_token = os.getenv(" ") #PLACE TOKEN HERE, FOLLOW TUTORIAL
+    device_id = os.getenv(" ") #USE getaccess.py to get THIS!
+    podcast_uri = os.getenv("spotify:show:5YRTZNTGT7MWhktYYpjR8v") #EXAMPLE PODCAST, replace with your own following tutorial
 
     access_token = get_spotify_token(client_id, client_secret, refresh_token)
     status_code = play_podcast(access_token, device_id, podcast_uri)
