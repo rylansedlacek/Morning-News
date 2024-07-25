@@ -34,7 +34,7 @@ def play_podcast(access_token, podcast_uri):
     response = requests.put(url, headers=headers, json=data)
     
     
-    if response.status_code != 200:
+    if response.status_code != 204:
         raise Exception(f"Failed to play podcast: {response.status_code} - {response.text}")
 
 def lambda_handler(event, context):
@@ -48,7 +48,7 @@ def lambda_handler(event, context):
         play_podcast(access_token, podcast_uri)
         
         return {
-            'statusCode': 200
+            'statusCode': 204,
             'body': 'Podcast playback initiated successfully.'
         }
     except Exception as e:
